@@ -45,19 +45,25 @@ button{
 
 <body>
 
-<div id="cursor"></div>
+<div id="cursor">🖱️</div>
 
 <style>
 #cursor{
-    width:30px;
-    height:30px;
+    width:50px;
+    height:50px;
     border-radius:50%;
     background:red;
     position:fixed;
     left:50%;
     top:80%;
-    z-index:9999;
-    touch-action:none;
+    transform:translate(-50%, -50%);
+    z-index:99999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    user-select:none;
 }
 </style>
 
@@ -100,4 +106,3 @@ document.getElementById("yesBtn").onclick = () => {
 
 </body>
 </html>
-awwww 
