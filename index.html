@@ -45,6 +45,33 @@ button{
 
 <body>
 
+<div id="cursor"></div>
+
+<style>
+#cursor{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:red;
+    position:fixed;
+    left:50%;
+    top:80%;
+    z-index:9999;
+    touch-action:none;
+}
+</style>
+
+<script>
+const cursor = document.getElementById("cursor");
+
+cursor.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+
+    cursor.style.left = touch.clientX + "px";
+    cursor.style.top = touch.clientY + "px";
+});
+</script>    
+    
 <div class="container">
     <h1>Mau jadi pacar aku? ❤️</h1>
 
