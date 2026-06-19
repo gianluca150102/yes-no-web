@@ -55,22 +55,16 @@ button{
 <script>
 const noBtn = document.getElementById("noBtn");
 
-document.addEventListener("mousemove", (e) => {
-    const rect = noBtn.getBoundingClientRect();
+function moveButton() {
+    noBtn.style.left =
+        Math.random() * (window.innerWidth - 100) + "px";
 
-    const distance = Math.sqrt(
-        Math.pow(e.clientX - (rect.left + rect.width/2), 2) +
-        Math.pow(e.clientY - (rect.top + rect.height/2), 2)
-    );
+    noBtn.style.top =
+        Math.random() * (window.innerHeight - 50) + "px";
+}
 
-    if(distance < 100){
-        noBtn.style.left =
-            Math.random() * (window.innerWidth - 100) + "px";
-
-        noBtn.style.top =
-            Math.random() * (window.innerHeight - 50) + "px";
-    }
-});
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("touchstart", moveButton);
 
 document.getElementById("yesBtn").onclick = () => {
     alert("Yeayyy ❤️");
