@@ -44,39 +44,6 @@ button{
 </head>
 
 <body>
-
-<div id="cursor">🖱️</div>
-
-<style>
-#cursor{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:red;
-    position:fixed;
-    left:50%;
-    top:80%;
-    transform:translate(-50%, -50%);
-    z-index:99999;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-weight:bold;
-    user-select:none;
-}
-</style>
-
-<script>
-const cursor = document.getElementById("cursor");
-
-cursor.addEventListener("touchmove", (e) => {
-    const touch = e.touches[0];
-
-    cursor.style.left = touch.clientX + "px";
-    cursor.style.top = touch.clientY + "px";
-});
-</script>    
     
 <div class="container">
     <h1>Nonton yukkk!! ❤️</h1>
