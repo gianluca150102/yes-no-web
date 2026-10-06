@@ -79,7 +79,7 @@ cursor.addEventListener("touchmove", (e) => {
 </script>    
     
 <div class="container">
-    <h1>nonton yuukk? ❤️</h1>
+    <h1>Nonton yukkk!! ❤️</h1>
 
     <button id="yesBtn">Yes</button>
     <button id="noBtn">No</button>
@@ -96,6 +96,8 @@ function moveButton() {
         Math.random() * (window.innerHeight - 50) + "px";
 }
 
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("touchstart", moveButton);
 
 document.getElementById("yesBtn").onclick = () => {
     alert("Yeayyy ❤️");
